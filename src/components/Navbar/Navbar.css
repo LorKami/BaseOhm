@@ -1,0 +1,214 @@
+.MenuHamburger {
+    z-index: 2000;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    left: 287px;
+    top: 20px;
+    display: none;
+    /* border: 2px solid red; */
+}
+
+.NavbarSection-Open {
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100vh;
+    /* border: 2px solid red; */
+}
+
+.NavbarSection-Closed {
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100vh;
+    /* border: 2px solid red; */
+}
+
+.NavbarBoxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 95vh;
+    /* border: 2px solid yellow; */
+}
+
+.NavBarLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 150px;
+    /* border: 2px solid red; */
+}
+
+.NavBarLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.NavbarMenu a {
+    text-decoration: none;
+}
+
+.NavbarMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 600px;
+    /* border: 2px solid blue; */
+}
+
+.NavbarMenu p {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    color: var(--bluetitle);
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+    /* border: 2px solid red; */
+}
+
+.NavbarMenu p::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.NavbarMenu p:hover::after {
+    width: calc(100% + 10px);
+    transform: translateX(-50%);
+}
+
+.NavbarSocials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40px;
+    /* border: 2px solid red; */
+}
+
+.Socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    color: white;
+    /* border: 2px solid yellow; */
+}
+
+.SocialBtn {
+    transition: 0.1s ease-in-out;
+}
+
+.SocialBtn:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+
+.ribboncontainer {
+    position: relative;
+    display: inline-block;
+}
+
+.ribboncontainer p {
+    margin-top: 20px;
+}
+
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    width: 80px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#0d5ec9 0%, #0a3ca7 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    right: -30px;
+    top: -5px;
+}
+
+.ribbon span::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+}
+
+.ribbon span::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 450px) {
+    .MenuHamburger {
+        position: absolute;
+        display: block;
+        left: 360px;
+        top: 5px;
+        width: 45px;
+        height: 45px;
+        /* border: 2px solid red; */
+    }
+
+    .NavbarSection-Open {
+        z-index: 999;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(0, 24, 68, 0.7);
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+    }
+
+    .NavbarSection-Closed {
+        display: none;
+    }
+
+    .NavBarLogo {
+        width: 80%;
+        height: 100px;
+    }
+}

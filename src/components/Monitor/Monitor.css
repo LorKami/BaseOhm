@@ -1,0 +1,63 @@
+.ConnectMonitor {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    /* border: 2px solid orange; */
+}
+
+.ConnectSection {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid blue; */
+}
+
+.ConnectSection button {
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    background-color: rgba(21, 0, 112, 0.322);
+    border-radius: 10px;
+    border: 2px solid var(--bluetitle);
+    color: white;
+    font-weight: 800;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ConnectSection button::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ConnectSection button:hover::after {
+    width: calc(100% + 10px);
+    transform: translateX(-50%);
+}
+
+.Address {
+    color: var(--bluetitle);
+}
+
+@media screen and (max-width: 450px) {
+    .ConnectSection button {
+        margin-right: 80px;
+    }
+
+}
